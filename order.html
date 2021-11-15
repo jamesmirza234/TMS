@@ -1,0 +1,108 @@
+<html>
+<head>
+	<title>ORDER WEB SERVICE</title>
+</head>
+<body>
+
+<h1 style="color: orange; vertical-align: top;"><img src="/images/order.png" width="36px" height="36px" title="order" /> ORDER WEB SERVICE</h1>
+<hr />
+<h2>1. SIGN UP</h2>
+<form method="POST" action="sign_up.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="lat" value="-6.1946638" placeholder="LATITUDE" />
+	<input type="text" name="lon" value="106.633992" placeholder="LONGITUDE" />
+	<input type="text" name="acc" value="25" placeholder="ACCURATE" />
+	<input type="text" name="name" value="Bejo" placeholder="NAME" />
+	<input type="text" name="key" value="" placeholder="KEY" />
+	<input type="submit" value="SUBMIT" />
+</form>
+<hr />
+<h2>2. CONFIRM</h2>
+<form method="POST" action="confirmation.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="SMSkey" value="1234" placeholder="KEY" />
+	<input type="submit" value="SUBMIT" />
+</form>
+<hr />
+<h2>3. LIST CUSTOMER</h2>
+<form method="POST" action="list_customer.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="term" value="" placeholder="TERM" />
+	<input type="submit" value="SUBMIT" />
+</form>
+<hr />
+<h2>4. LIST CONTACT</h2>
+<form method="POST" action="list_contact.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="term" value="" placeholder="TERM" />
+	<input type="submit" value="SUBMIT" />
+</form>
+<hr />
+<h2>5. LIST SERVICE</h2>
+<form method="POST" action="list_service.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="submit" value="SUBMIT" />
+</form>
+<hr />
+<h2>6. LIST ITEM</h2>
+<form method="POST" action="list_item.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="term" value="" placeholder="TERM" />
+	<input type="submit" value="SUBMIT" />
+</form>
+<hr />
+<h2>7. LIST UOM</h2>
+<form method="POST" action="list_uom.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="submit" value="SUBMIT" />
+</form>
+<hr />
+<h2>8. GET RATE</h2>
+<form method="POST" action="get_rate.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="origin" value="JAKARTA" placeholder="ORIGIN" />
+	<input type="text" name="destination" value="BANDUNG" placeholder="DESTINATION" />
+	<input type="text" name="service" value="Reguler" placeholder="SERVICE" />
+	<input type="text" name="uom" value="kg" placeholder="UOM" />
+	<input type="submit" value="SUBMIT" />
+</form>
+<hr />
+<h2>9. LIST ADD SERVICE</h2>
+<form method="POST" action="list_add_service.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="submit" value="SUBMIT" />
+</form>
+<hr />
+<h2>10. SAVE ORDER</h2>
+<form method="POST" action="save_order.php">
+	<input type="text" name="info" value='{"imei":"0123456789","phone":"082177404407","lat":"-6.1946638","lon":"106.633992","acc":25}' placeholder="INFO" />
+	<input type="text" name="header" value='{"customer":"Perum Perhutani","pick_up":"2014-09-10","description":"Good"}' placeholder="HEADER" />
+	<input type="text" name="origin" value='{"name":"RS Azra","company":"RS Azra","address":"Jl. Pajajaran No 219","city":"Bogor","province":"Jawa Barat","country":"Indonesia","zip":"16153","contact":"Bejo","phone":"(0251) 8318456","email":"bejo@arza.com"}' placeholder="ORIGIN" />
+	<input type="text" name="destination" value='{"name":"RS Salak","company":"RS Salak","address":"Jl Jend Sudirman 8, Sempur","city":"Bogor","province":"Jawa Barat","country":"Indonesia","zip":"16154","contact":"Retno","phone":"(0251) 8344627","email":"retno@rssalak.com"}' placeholder="DESTINATION" />
+	<input type="text" name="order" value='{"service":"Reguler","note":"Note","item":[{"name":"kasur","length":200,"width":100,"height":15,"weight":15},{"name":"meja","length":150,"width":50,"height":60,"weight":40}]}' placeholder="ORDER" />
+	<input type="submit" value="SUBMIT" />
+</form>
+<hr />
+<h2>11. SAVE INVOICE</h2>
+<form method="POST" action="save_invoice.php">
+	<input type="text" name="info" value='{"imei":"0123456789","phone":"082177404407","lat":"-6.1946638","lon":"106.633992","acc":25}' placeholder="INFO" />
+	<input type="text" name="header" value='{"order":"1","origin":"Bogor","destination":"Bogor","collie":2,"chargeable":4,"service":"Reguler","uom":"kg","rate":5000,"vat":515,"vat_percent":10,"total":5515}' placeholder="HEADER" />
+	<input type="text" name="service" value='[{"name":"Asuransi","charge":100},{"name":"Bungkus","charge":50}]' placeholder="SERVICE" />
+	<input type="submit" value="SUBMIT" />
+</form>
+<hr />
+<a href="user-data.html">User</a><br />
+<a href="master-data.html">Master</a><br />
+<a href="order-data.html">Order</a><br />
+<a href="invoice-data.html">Invoice</a>
+</body>
+</html>

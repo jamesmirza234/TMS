@@ -1,0 +1,191 @@
+<html>
+<head>
+	<title>LAUNDRY WEB SERVICE</title>
+</head>
+<body>
+
+<h1 style="color: skyblue; vertical-align: top;"><img src="/images/laundry.png" width="36px" height="36px" title="Logo" /> LAUNDRY WEB SERVICE</h1>
+
+<hr />
+<h2>1. LIST TRANSPORT TYPE {response: true}</h2>
+<form method="POST" action="list_transport_type.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="submit" value="SUBMIT" />
+</form>
+
+<hr />
+<h2>2. NEW TRANSPORT {response: true}</h2>
+<form method="POST" action="new_transport.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="lat" value="-6.1946638" placeholder="LATITUDE" />
+	<input type="text" name="lon" value="106.633992" placeholder="LONGITUDE" />
+	<input type="text" name="acc" value="25" placeholder="ACCURATE" />
+	<input type="text" name="name" value="B1234ABC" placeholder="NAME" />
+	<input type="text" name="type" value="CD4" placeholder="TYPE" />
+	<input type="text" name="l" value="500" placeholder="LENGTH" />
+	<input type="text" name="w" value="350" placeholder="WIDTH" />
+	<input type="text" name="h" value="200" placeholder="HEIGHT" />
+	<input type="submit" value="SUBMIT" />
+</form>
+
+<hr />
+<h2>3. NEW BASKET {response: true}</h2>
+<form method="POST" action="new_basket.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="lat" value="-6.1946638" placeholder="LATITUDE" />
+	<input type="text" name="lon" value="106.633992" placeholder="LONGITUDE" />
+	<input type="text" name="acc" value="25" placeholder="ACCURATE" />
+	<input type="text" name="name" value="ZB1234ABC" placeholder="NAME" />
+	<input type="text" name="fix" value="true" placeholder="FIX" />
+	<input type="text" name="l" value="300" placeholder="LENGTH" />
+	<input type="text" name="w" value="350" placeholder="WIDTH" />
+	<input type="text" name="h" value="200" placeholder="HEIGHT" />
+	<input type="submit" value="SUBMIT" />
+</form>
+
+<hr />
+<h2>4. LIST TRANSPORT {response: true}</h2>
+<form method="POST" action="list_transport.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="transport" value="B1234ABC" placeholder="TRANSPORT" />
+	<input type="submit" value="SUBMIT" />
+</form>
+
+<hr />
+<h2>5. LIST BASKET {response: true}</h2>
+<form method="POST" action="list_basket.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="basket" value="ZB1234ABC" placeholder="BASKET" />
+	<input type="text" name="page" value="1" placeholder="PAGE" />
+	<input type="text" name="row" value="10" placeholder="ROW" />
+	<input type="submit" value="SUBMIT" />
+</form>
+
+<hr />
+<h2>6. LIST LAUNDRY {response: true}</h2>
+<form method="POST" action="list_laundry.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="label" value="LABEL140900001XX" placeholder="LABEL" />
+	<input type="submit" value="SUBMIT" />
+</form>
+
+<hr />
+<h2>7. STATUS TRANSPORT {response: true}</h2>
+<form method="POST" action="status_transport.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="lat" value="-6.1946638" placeholder="LATITUDE" />
+	<input type="text" name="lon" value="106.633992" placeholder="LONGITUDE" />
+	<input type="text" name="acc" value="25" placeholder="ACCURATE" />
+	<input type="text" name="transport" value="B1234ABC" placeholder="TRANSPORT" />
+	<input type="submit" value="SUBMIT" />
+</form>
+
+<hr />
+<h2>8. STATUS BASKET {response: true}</h2>
+<form method="POST" action="status_basket.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="lat" value="-6.1946638" placeholder="LATITUDE" />
+	<input type="text" name="lon" value="106.633992" placeholder="LONGITUDE" />
+	<input type="text" name="acc" value="25" placeholder="ACCURATE" />
+	<input type="text" name="basket" value="ZB1234ABC" placeholder="BASKET" />
+	<input type="submit" value="SUBMIT" />
+</form>
+
+<hr />
+<h2>9. SAVE LAUNDRY TO BASKET {response: true}</h2>
+<form method="POST" action="save_laundry_to_basket.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="lat" value="-6.1946638" placeholder="LATITUDE" />
+	<input type="text" name="lon" value="106.633992" placeholder="LONGITUDE" />
+	<input type="text" name="acc" value="25" placeholder="ACCURATE" />
+	<input type="text" name="basket" value="ZB1234ABC" placeholder="BASKET" />
+	<input type="text" name="label" value="LABEL140900001XX" placeholder="LABEL" />
+	<input type="submit" value="SUBMIT" />
+</form>
+
+<hr />
+<h2>10. SAVE LAUNDRY TO TRANSPORT {response: true}</h2>
+<form method="POST" action="save_laundry_to_transport.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="lat" value="-6.1946638" placeholder="LATITUDE" />
+	<input type="text" name="lon" value="106.633992" placeholder="LONGITUDE" />
+	<input type="text" name="acc" value="25" placeholder="ACCURATE" />
+	<input type="text" name="transport" value="B1234ABC" placeholder="TRANSPORT" />
+	<input type="text" name="label" value="LABEL140900001XX" placeholder="LABEL" />
+	<input type="submit" value="SUBMIT" />
+</form>
+
+<hr />
+<h2>11. SAVE ORDER TO BASKET {response: true}</h2>
+<form method="POST" action="save_order_to_basket.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="lat" value="-6.1946638" placeholder="LATITUDE" />
+	<input type="text" name="lon" value="106.633992" placeholder="LONGITUDE" />
+	<input type="text" name="acc" value="25" placeholder="ACCURATE" />
+	<input type="text" name="basket" value="ZB1234ABC" placeholder="BASKET" />
+	<input type="text" name="order" value="ORDER140901" placeholder="ORDER" />
+	<input type="submit" value="SUBMIT" />
+</form>
+
+<hr />
+<h2>12. SAVE ORDER TO TRANSPORT {response: true}</h2>
+<form method="POST" action="save_order_to_transport.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="lat" value="-6.1946638" placeholder="LATITUDE" />
+	<input type="text" name="lon" value="106.633992" placeholder="LONGITUDE" />
+	<input type="text" name="acc" value="25" placeholder="ACCURATE" />
+	<input type="text" name="transport" value="B1234ABC" placeholder="TRANSPORT" />
+	<input type="text" name="order" value="ORDER140901" placeholder="ORDER" />
+	<input type="submit" value="SUBMIT" />
+</form>
+
+<hr />
+<h2>13. SAVE BASKET TO TRANSPORT {response: true}</h2>
+<form method="POST" action="save_basket_to_transport.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="lat" value="-6.1946638" placeholder="LATITUDE" />
+	<input type="text" name="lon" value="106.633992" placeholder="LONGITUDE" />
+	<input type="text" name="acc" value="25" placeholder="ACCURATE" />
+	<input type="text" name="transport" value="B1234ABC" placeholder="TRANSPORT" />
+	<input type="text" name="basket" value="N01XX" placeholder="BASKET" />
+	<input type="submit" value="SUBMIT" />
+</form>
+
+<hr />
+<h2>14. SAVE TRANSPORT TO TRANSPORT {response: true}</h2>
+<form method="POST" action="save_transport_to_transport.php">
+	<input type="text" name="imei" value="0123456789" placeholder="IMEI" />
+	<input type="text" name="phone" value="082177404407" placeholder="PHONE" />
+	<input type="text" name="lat" value="-6.1946638" placeholder="LATITUDE" />
+	<input type="text" name="lon" value="106.633992" placeholder="LONGITUDE" />
+	<input type="text" name="acc" value="25" placeholder="ACCURATE" />
+	<input type="text" name="transport1" value="B1234ABC" placeholder="TRANSPORT" />
+	<input type="text" name="transport2" value="B4321ABC" placeholder="TRANSPORT" />
+	<input type="submit" value="SUBMIT" />
+</form>
+
+<hr />
+<a href="/order_data.html">ORDER</a><br />
+<a href="/laundry_data.html">LAUNDRY</a><br />
+<a href="/basket_data.html">BASKET</a><br />
+<a href="/transport_data.html">TRANSPORT</a><br />
+
+<script>
+	window.onload = function (e) {
+	}
+</script>
+</body>
+</html>
